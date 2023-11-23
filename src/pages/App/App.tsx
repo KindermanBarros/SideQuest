@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
         <Link to="/signin">
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
@@ -21,7 +20,6 @@ const App: React.FC = () => {
         >
           Learn React
         </a>
-      </header>
     </div>
   );
 };
