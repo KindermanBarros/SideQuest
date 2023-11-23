@@ -29,7 +29,7 @@
     
     <div id='root'></div>
     
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <p id="load"></p>
     
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -62,10 +62,10 @@
             'remoteConfig',
             'performance',
           ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+         
         } catch (e) {
           console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+         
         }
       });
     </script>
