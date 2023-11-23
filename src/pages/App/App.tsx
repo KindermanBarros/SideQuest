@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Home from '../Home/home';
 import logo from '../../assets/icons/logo.svg';
+<<<<<<< HEAD
 import { Container, Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
@@ -16,4 +17,28 @@ function App() {
   )
     
   }
+=======
+
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+};
+
+>>>>>>> master
 export default App;
