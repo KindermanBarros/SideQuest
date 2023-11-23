@@ -13,6 +13,7 @@ const AppRouter: React.FC = () => {
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/signin" element={<SignIn />} />
+                <Route path="/Home" element={<Home/>} />
             </Routes>
         </Router>
     );
