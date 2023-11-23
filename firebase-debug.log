@@ -1,0 +1,46 @@
+[debug] [2023-11-23T04:36:20.102Z] ----------------------------------------------------------------------
+[debug] [2023-11-23T04:36:20.105Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kinderman\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-11-23T04:36:20.105Z] CLI Version:   12.9.1
+[debug] [2023-11-23T04:36:20.105Z] Platform:      win32
+[debug] [2023-11-23T04:36:20.105Z] Node Version:  v20.10.0
+[debug] [2023-11-23T04:36:20.106Z] Time:          Thu Nov 23 2023 00:36:20 GMT-0400 (Amazon Standard Time)
+[debug] [2023-11-23T04:36:20.106Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-23T04:36:20.174Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-23T04:36:20.174Z] > authorizing via signed-in user (kindbarros@gmail.com)
+[debug] [2023-11-23T04:36:20.174Z] [iam] checking project sidequest-hw for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-11-23T04:36:20.175Z] > refreshing access token with scopes: []
+[debug] [2023-11-23T04:36:20.177Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-23T04:36:20.177Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-23T04:36:20.694Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-11-23T04:36:20.694Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-23T04:36:20.701Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sidequest-hw:testIamPermissions [none]
+[debug] [2023-11-23T04:36:20.702Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sidequest-hw:testIamPermissions x-goog-quota-user=projects/sidequest-hw
+[debug] [2023-11-23T04:36:20.702Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sidequest-hw:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-11-23T04:36:21.945Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sidequest-hw:testIamPermissions 200
+[debug] [2023-11-23T04:36:21.945Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sidequest-hw:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-11-23T04:36:21.946Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw [none]
+[debug] [2023-11-23T04:36:22.724Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw 200
+[debug] [2023-11-23T04:36:22.724Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw {"projectId":"sidequest-hw","projectNumber":"171939413861","displayName":"SideQuest","name":"projects/sidequest-hw","resources":{"hostingSite":"sidequest-hw","storageBucket":"sidequest-hw.appspot.com","locationId":"us-east1"},"state":"ACTIVE","etag":"1_5f43507a-b600-41fe-80c1-85ff12779236"}
+[info] 
+[info] === Deploying to 'sidequest-hw'...
+[info] 
+[info] i  deploying storage, firestore, hosting 
+[debug] [2023-11-23T04:36:22.727Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw [none]
+[debug] [2023-11-23T04:36:23.139Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw 200
+[debug] [2023-11-23T04:36:23.139Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sidequest-hw {"projectId":"sidequest-hw","projectNumber":"171939413861","displayName":"SideQuest","name":"projects/sidequest-hw","resources":{"hostingSite":"sidequest-hw","storageBucket":"sidequest-hw.appspot.com","locationId":"us-east1"},"state":"ACTIVE","etag":"1_5f43507a-b600-41fe-80c1-85ff12779236"}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2023-11-23T04:36:23.141Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test [none]
+[debug] [2023-11-23T04:36:23.141Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test [omitted]
+[debug] [2023-11-23T04:36:24.505Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test 200
+[debug] [2023-11-23T04:36:24.505Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2023-11-23T04:36:24.507Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test [none]
+[debug] [2023-11-23T04:36:24.507Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test [omitted]
+[debug] [2023-11-23T04:36:25.461Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test 200
+[debug] [2023-11-23T04:36:25.461Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/sidequest-hw:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2023-11-23T04:36:25.464Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sidequest-hw/versions [none]
+[debug] [2023-11-23T04:36:25.464Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/sidequest-hw/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
