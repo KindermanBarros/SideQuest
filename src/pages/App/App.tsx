@@ -2,22 +2,8 @@ import React from 'react';
 import './App.css';
 import Home from '../Home/home';
 import logo from '../../assets/icons/logo.svg';
-<<<<<<< HEAD
 import { Container, Typography } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { red } from '@mui/material/colors';
-
-const theme = createTheme();
-
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <Home/>
-    </ThemeProvider>
-  )
-    
-  }
-=======
 
 const App: React.FC = () => {
   return (
@@ -40,5 +26,4 @@ const App: React.FC = () => {
   );
 };
 
->>>>>>> master
 export default App;
