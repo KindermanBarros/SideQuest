@@ -1,15 +1,16 @@
-import React from 'react';
-import './App.css';
-import Home from '../Home/home';
-import logo from '../../assets/icons/logo.svg';
-import { Container, Typography } from '@mui/material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import React from "react";
+import "./App.css";
+import logo from "../../assets/icons/logo.svg";
+import { Link } from "react-router-dom";
+
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Link to="/signin">
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>

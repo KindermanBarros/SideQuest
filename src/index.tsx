@@ -1,17 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/App/App';
 import reportWebVitals from './reportWebVitals';
+import AppRouter from './pages/router/MainRouter';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const root = document.getElementById('root');
+
+if (root) {
+  ReactDOM.render(
+    <React.StrictMode>
+      <AppRouter />
+    </React.StrictMode>,
+    root
+  );
+} else {
+  throw new Error('Root element not found in the document.');
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
