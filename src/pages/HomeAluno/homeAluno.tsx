@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../shared/components/header/header";
 import Card from "../../shared/components/card/card";
 import { Box, Typography } from "@mui/material";
+import HeaderAluno from "../../shared/components/HeaderAluno/HeaderAluno";
 
 function HomeAluno(){
     return (
@@ -13,7 +14,7 @@ function HomeAluno(){
             height: "100vh",
             bgcolor: "#05445E",
           }}>
-            <Header/>
+            <HeaderAluno/>
       <Box sx={{
         display: 'flex',
         flexDirection: 'column',
