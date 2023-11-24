@@ -16,7 +16,7 @@ function Home(){
             <Typography sx={{fontWeight: 'bold'}}>Ranking</Typography>
 
             <Box>
-
+                
             </Box>
         </Box>
         

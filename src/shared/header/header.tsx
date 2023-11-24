@@ -15,7 +15,8 @@ function Header() {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        
       }}
     >
     <Box 
@@ -35,6 +36,8 @@ function Header() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          transition: 'transform 0.3s ease',
+          ':hover': {bgcolor: 'white',  transform: 'scale(1.1)'}
         }}
       >
         <MenuBookIcon fontSize="large" />
@@ -53,6 +56,8 @@ function Header() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          transition: 'transform 0.3s ease',
+          ':hover': {bgcolor: 'white',  transform: 'scale(1.1)'}
         }}
       >
         <AddIcon fontSize="large" />

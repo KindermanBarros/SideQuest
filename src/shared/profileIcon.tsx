@@ -10,7 +10,8 @@ function ProfileIcon(){
             borderRadius: '50%',
             bgcolor: 'white',
             height: '55px',
-            marginRight: '20px'
+            marginRight: '20px',
+            ':hover': {bgcolor: 'white'}
         }}>
             <PersonIcon fontSize="large"/>
         </Button>
