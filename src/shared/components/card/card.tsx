@@ -23,30 +23,36 @@ const StyledButton = styled(Button)({
   // Add any additional styling for Button if needed
 });
 
-// Modified BasicCard component
-const BasicCard = ({ title, image }: { title: string; image: string }) => {
-    return (
-        <StyledCard>
-            <CardContent>
-                <StyledTypography color="text.secondary" gutterBottom>
-                    {title}
-                </StyledTypography>
-                {/* Use the title prop dynamically */}
-                <Typography variant="h5" component="div">
-                    {title}
-                </Typography>
-                <img src={image} alt={title} style={{ maxWidth: '100%', height: 'auto' }} />
-                {/* Use the image prop dynamically */}
-                <Typography mb={1.5} color="text.secondary">
-                    adjective
-                </Typography>
-            </CardContent>
-            <StyledCardActions>
-                <StyledButton size="small">Learn More</StyledButton>
-            </StyledCardActions>
-        </StyledCard>
-    );
+interface CardProps {
+  title: string;
+  buttonText: string;
+}
+
+const Card: React.FC<CardProps> = ({ title, buttonText }) => {
+  return (
+    <StyledCard>
+      <CardContent>
+        <StyledTypography color="text.secondary" gutterBottom>
+          {title}
+        </StyledTypography>
+        <Typography variant="h5" component="div">
+          be•nev•o•lent
+        </Typography>
+        <Typography mb={1.5} color="text.secondary">
+          adjective
+        </Typography>
+        <Typography variant="body2">
+          well meaning and kindly.
+          <br />
+          {'"a benevolent smile"'}
+        </Typography>
+      </CardContent>
+      <StyledButton variant="contained" color="primary">
+        {buttonText}
+      </StyledButton>
+    </StyledCard>
+  );
 };
 
-export default BasicCard;
+export default Card;
 
