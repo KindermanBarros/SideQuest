@@ -1,26 +1,34 @@
 import React, { useState } from "react";
 import { Button, Alert, Box, Stack } from "@mui/material";
-import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithPopup,
+  updateProfile,
+} from "firebase/auth";
 import { auth, googleAuthProvider as provider } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../shared/components/inputField/input";
 import UnvisitedLink from "../../shared/components/link/link";
 
-const LoginForm: React.FC = () => {
+const SignUp: React.FC = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
         // Signed in
-        const user = result.user;
+        var user = userCredential.user;
+        // Update profile with username
+        return updateProfile(user, { displayName: username });
+      })
+      .then(() => {
         // Redirect to home screen
-        if (user) {
-          navigate("/home");
-        }
+        navigate("/home");
       })
       .catch((error) => {
         // Show error message
@@ -28,16 +36,13 @@ const LoginForm: React.FC = () => {
       });
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+  const handleGoogleSignUp = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
         // Signed in
-        const user = userCredential.user;
+        var user = result.user;
         // Redirect to home screen
-        if (user) {
-          navigate("/home");
-        }
+        navigate("/home");
       })
       .catch((error) => {
         // Show error message
@@ -61,24 +66,29 @@ const LoginForm: React.FC = () => {
       <form onSubmit={handleSubmit}>
         <Stack spacing={2}>
           <InputField
+            label="Username"
+            id="username-input"
+            type="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+
+          <InputField
+            label="Email"
             id="email-input"
             type="email"
-            label="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
+
           <InputField
-            id="password-input"
             label="Password"
+            id="password-input"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {error && (
-            <Alert severity="error" sx={{ color: "red" }}>
-              {error}
-            </Alert>
-          )}
+          {error && <Alert severity="error">{error}</Alert>}
           <Button
             type="submit"
             sx={{
@@ -87,20 +97,20 @@ const LoginForm: React.FC = () => {
               borderRadius: "50px",
             }}
           >
-            LogIn
+            Sign Up
           </Button>
           <Button
-            onClick={handleGoogleSignIn}
+            onClick={handleGoogleSignUp}
             sx={{
               color: "primary.main",
               bgcolor: "secondary.main",
               borderRadius: "50px",
             }}
           >
-            Sign In with Google
+            Sign Up with Google
           </Button>
-          <UnvisitedLink to="/signup">
-            Don't have an account? Sign Up
+          <UnvisitedLink to="/signin">
+            Do you have an account? Sign In
           </UnvisitedLink>
         </Stack>
       </form>
@@ -108,4 +118,4 @@ const LoginForm: React.FC = () => {
   );
 };
 
-export default LoginForm;
+export default SignUp;

@@ -1,26 +1,20 @@
-import * as React from 'react';
-import styled from '@mui/material/styles/styled';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import { styled } from '@mui/material';
+import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
+import theme from '../../../themes/theme';
 
-const StyledCard = styled(Card)({
+const StyledCard = styled(MuiCard)({
   minWidth: 275,
+  // Add more styling as needed
 });
 
 const StyledTypography = styled(Typography)({
   fontSize: 14,
-});
-
-const StyledCardActions = styled(CardActions)({
-  // Add any additional styling for CardActions if needed
+  // Add more styling as needed
 });
 
 const StyledButton = styled(Button)({
-  // Add any additional styling for Button if needed
+  // Add styling for the button
 });
 
 interface CardProps {
@@ -55,4 +49,5 @@ const Card: React.FC<CardProps> = ({ title, buttonText }) => {
 };
 
 export default Card;
+
 

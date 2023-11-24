@@ -1,9 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
+import {
+  getAuth,
+  GoogleAuthProvider,
+} from "firebase/auth";
 
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCuQFkgM--ppyCNg6y17Gj_veB6d6Dujyc",
   authDomain: "sidequest-hw.firebaseapp.com",
@@ -11,13 +16,10 @@ const firebaseConfig = {
   storageBucket: "sidequest-hw.appspot.com",
   messagingSenderId: "171939413861",
   appId: "1:171939413861:web:139f86827a434a80c1eb8c",
-  measurementId: "G-GYXYHLCDKL"
+  measurementId: "G-GYXYHLCDKL",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app); 
-const provider = new GoogleAuthProvider();
-const auth = getAuth(app);
-
-export { auth, provider, app as firebase };
+export const firebase = initializeApp(firebaseConfig);
+export const auth = getAuth(firebase);
+export const googleAuthProvider = new GoogleAuthProvider();

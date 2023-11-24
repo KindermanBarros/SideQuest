@@ -3,7 +3,6 @@ import "./App.css";
 import {Link} from 'react-router-dom'
 import Card from "../../shared/components/card/card";
 
-
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -12,20 +11,19 @@ const App: React.FC = () => {
           test
         </Link>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Sidequest é uma plataforma para utilização de quests em sala de aula.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>Dever de casa nunca foi tão divertido!</p>
+      
+        <div>
+        <Card title="My Card Title" buttonText="Click me" />
+      </div>
       </header>
+
       <body>
         <Card buttonText="test" title="Titulo"/>
       </body>
+
     </div>
   );
 };

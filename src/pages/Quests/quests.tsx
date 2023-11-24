@@ -29,9 +29,11 @@ function Quests(){
             gridTemplateColumns: '1fr 1fr 1fr',
             gap: '12px'
         }}>
+
         <Card title="HTML" buttonText="test"/>
         <Card title="HTML" buttonText="test"/>
         <Card title="HTML" buttonText="test"/>
+
     
         </Box>
         
