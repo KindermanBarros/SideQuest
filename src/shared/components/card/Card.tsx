@@ -25,7 +25,7 @@ interface CardProps {
   buttonText: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, subtitle, body, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title, subtitle, body }) => {
   return (
     <StyledCard>
       <CardContent>

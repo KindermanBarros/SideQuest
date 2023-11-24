@@ -16,6 +16,7 @@ const App: React.FC = () => {
           Sidequest é uma plataforma para utilização de quests em sala de aula.
         </p>
         <p>Dever de casa nunca foi tão divertido!</p>
+        <p>Toque na logo para fazer login!</p>
       </header>
     </div>
   );
