@@ -20,10 +20,6 @@ const App: React.FC = () => {
         <p>Toque na logo para fazer login!</p>
       </header>
 
-      <body>
-        <Card buttonText="test" title="Titulo"/>
-      </body>
-
     </div>
   );
 };
