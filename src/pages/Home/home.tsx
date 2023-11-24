@@ -1,5 +1,4 @@
-import { AppBar, Box, Container, List, ListItem, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Typography } from "@mui/material";
 import Header from "../../shared/header/header";
 import RankList from "../../shared/rankList";
 

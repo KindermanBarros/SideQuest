@@ -1,7 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material';
 import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
-import theme from '../../../themes/theme';
 
 const StyledCard = styled(MuiCard)({
   minWidth: 275,
@@ -22,7 +21,7 @@ interface CardProps {
   buttonText: string;
 }
 
-const card: React.FC<CardProps> = ({ title, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title, buttonText }) => {
   return (
     <StyledCard>
       <CardContent>
@@ -48,4 +47,4 @@ const card: React.FC<CardProps> = ({ title, buttonText }) => {
   );
 };
 
-export default card;
+export default Card;
