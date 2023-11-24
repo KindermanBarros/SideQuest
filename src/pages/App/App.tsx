@@ -4,6 +4,7 @@ import logo from "../../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
 import Card from "../../shared/components/card/Card";
 
+
 const App: React.FC = () => {
   return (
     <div className="App">
