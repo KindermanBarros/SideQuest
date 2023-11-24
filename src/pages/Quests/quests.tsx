@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import Header from "../../shared/header/header";
+import Header from "../../shared/components/header/Header";
 import Card from "../../shared/components/card/card";
 
 function Quests(){
@@ -33,7 +33,6 @@ function Quests(){
         <Card title="HTML" buttonText="test"/>
         <Card title="HTML" buttonText="test"/>
         <Card title="HTML" buttonText="test"/>
-
     
         </Box>
         
