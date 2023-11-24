@@ -2,16 +2,16 @@ import { Button, buttonBaseClasses } from "@mui/material";
 import React from "react";
 import PersonIcon from '@mui/icons-material/Person';
 
-function ProfileIcon(){
+function ProfileIcon({tam}: {tam:number}){
     return (
         <Button
         sx=
         {{
             borderRadius: '50%',
             bgcolor: 'white',
-            height: '55px',
+            height: `${tam}px`,
             marginRight: '20px',
-            ':hover': {bgcolor: 'white'}
+
         }}>
             <PersonIcon fontSize="large"/>
         </Button>

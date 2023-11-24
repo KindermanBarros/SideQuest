@@ -64,7 +64,7 @@ function Header() {
         <Typography sx={{ fontWeight: "bold" }}>Criar card</Typography>
       </Button>
       </Box>
-        <ProfileIcon/>
+        <ProfileIcon tam={55}/>
       
     </AppBar>
   );
