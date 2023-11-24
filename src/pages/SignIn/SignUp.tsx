@@ -7,8 +7,8 @@ import {
 } from "firebase/auth";
 import { auth, googleAuthProvider as provider } from "../../firebase";
 import { useNavigate } from "react-router-dom";
-import InputField from "../../shared/components/inputField/input";
-import UnvisitedLink from "../../shared/components/link/link";
+import InputField from "../../shared/components/inputField/InputField";
+import UnvisitedLink from "../../shared/components/link/Link";
 
 const SignUp: React.FC = () => {
   const [username, setUsername] = useState("");
