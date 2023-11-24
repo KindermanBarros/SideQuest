@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material";
 import React from "react";
 import Header from "../../shared/components/header/header";
 import Card from "../../shared/components/card/card";
+import { Box, Typography } from "@mui/material";
 
-function Quests(){
+function HomeAluno(){
     return (
         <Box  sx={{
             display: "flex",
@@ -23,7 +23,7 @@ function Quests(){
         fontWeight: 'bold',
         fontSize:'30px',
         marginRight: '55%',
-      }}>Quests</Typography>
+      }}>Suas Quests</Typography>
         <Box sx={{
             display:'grid',
             gridTemplateColumns: '1fr 1fr 1fr',
@@ -39,6 +39,7 @@ function Quests(){
       </Box>
         </Box>
     );
+
 }
 
-export default Quests;
+export default HomeAluno
