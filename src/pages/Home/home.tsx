@@ -1,6 +1,8 @@
 import { AppBar, Box, Container, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import Header from "../../shared/header/header";
+import RankList from "../../shared/rankList";
+
 
 function Home() {
   return (
@@ -39,6 +41,12 @@ function Home() {
               fontWeight:'bold',
               marginLeft:'25px'
             }}>Nº</Typography>
+
+            <Typography sx={{
+              fontWeight: 'bold',
+              marginRight: '40px'
+            }}>Perfil</Typography>
+
             <Typography sx={{
               fontWeight: 'bold',
             }}>Aluno</Typography>
@@ -47,26 +55,15 @@ function Home() {
               marginRight:'12px'
             }}>Pontuação</Typography>
           </Box>
+            <RankList nome="Ricardo" ponto={50} rank={1}/>
 
-          <List component='ol' sx={{
-            display:'flex',
-            flexDirection:'column',
-            alignItems: 'center',
-            p: '10px'
-          }}>
-            <ListItem component='li' sx={{
-              borderBottom:'1px solid black',
-              display:'flex',
-              alignItems: 'center',
-              height: '40px'
-            }}>
-              <Typography sx={{
-                fontWeight: 'bold'
-              }}>1</Typography>
-            </ListItem>
+            <RankList nome="Fulano" ponto = {45} rank={2}/>
 
-          </List>
-          
+            <RankList nome="Ciclano" ponto={30} rank={3}/>
+
+            <RankList nome="Beltrano" ponto={25} rank={4}/>
+
+            <RankList nome="Murano" ponto={10} rank={5}/>
         </Box>
     </Box>
   );
