@@ -12,7 +12,7 @@ function RankList({nome, ponto, rank}: {nome:string, ponto:number, rank:number})
             flexDirection:'column',
             alignItems: 'center',
             p: '12px',
-            marginTop: '10px'
+            marginTop: '5px'
           }}>
             <ListItem component='li' sx={{
               borderBottom:'1px solid black',
