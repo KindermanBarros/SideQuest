@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // Import your components/pages here
 import SignIn from "../SignIn/SignIn";
 import App from "../App/App";
-import Home from "../Home/Home";
+import Home from "../Home/home";
 import Quests from "../Quests/quests";
 import SignUp from "../SignIn/SignUp";
+import HomeAluno from "../HomeAluno/homeAluno";
 
 const AppRouter: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter: React.FC = () => {
         <Route path="/" element={<App />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/HomeAluno" element={<HomeAluno/>} />
         <Route path="/Quests" element={<Quests />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

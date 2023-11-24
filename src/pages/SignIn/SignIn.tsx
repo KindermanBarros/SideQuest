@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth, googleAuthProvider as provider } from "../../firebase";
 import { useNavigate } from "react-router-dom";
 import InputField from "../../shared/components/inputField/InputField";
-import UnvisitedLink from "../../shared/components/link/Link";
+import UnvisitedLink from "../../shared/components/link/link";
 
 const LoginForm: React.FC = () => {
   const [email, setEmail] = useState("");

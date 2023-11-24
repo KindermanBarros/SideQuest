@@ -1,6 +1,6 @@
 import { List, ListItem, Typography } from "@mui/material";
 import React from "react";
-import ProfileIcon from "./ProfileIcon";
+import ProfileIcon from "./profileIcon";
 
 function RankList({nome, ponto, rank}: {nome:string, ponto:number, rank:number}){
 

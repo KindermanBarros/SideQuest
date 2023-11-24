@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import Typography from "@mui/material/Typography";
 
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -22,6 +23,11 @@ const App: React.FC = () => {
           <Typography>Butts</Typography>
         </IconButton>
       </header>
+
+      <body>
+        <Card buttonText="test" title="Titulo"/>
+      </body>
+
     </div>
   );
 };

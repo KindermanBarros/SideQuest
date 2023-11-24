@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Header from "../../shared/components/header/Header";
-import Card from "../../shared/components/card/Card";
+import Card from "../../shared/components/card/card";
 
 function Quests() {
   return (
@@ -42,6 +42,7 @@ function Quests() {
           <Card title="HTML" subtitle="HTML" body="Hewo" buttonText="test" />
           <Card title="HTML" subtitle="HTML" body="HWEWO" buttonText="test" />
           <Card title="HTML" subtitle="HTML" body="hEWO" buttonText="test" />
+
         </Box>
       </Box>
     </Box>
