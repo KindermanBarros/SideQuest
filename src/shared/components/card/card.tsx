@@ -3,7 +3,8 @@ import { styled } from '@mui/material';
 import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
 
 const StyledCard = styled(MuiCard)({
-  minWidth: 275,
+  minWidth: 300,
+  minHeight: 300,
   // Add more styling as needed
 });
 
@@ -15,13 +16,14 @@ const StyledTypography = styled(Typography)({
 const StyledButton = styled(Button)({
   // Add styling for the button
 });
-
 interface CardProps {
   title: string;
+  subtitle: string;
+  body: string;
   buttonText: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title,subtitle,body, buttonText }) => {
   return (
     <StyledCard>
       <CardContent>
@@ -29,15 +31,10 @@ const Card: React.FC<CardProps> = ({ title, buttonText }) => {
           {title}
         </StyledTypography>
         <Typography variant="h5" component="div">
-          be•nev•o•lent
+          {subtitle}
         </Typography>
         <Typography mb={1.5} color="text.secondary">
-          adjective
-        </Typography>
-        <Typography variant="body2">
-          well meaning and kindly.
-          <br />
-          {'"a benevolent smile"'}
+          {body}
         </Typography>
       </CardContent>
       <StyledButton variant="contained" color="primary">
