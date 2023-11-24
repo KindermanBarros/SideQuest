@@ -3,6 +3,9 @@ import React from "react";
 import ProfileIcon from "./profileIcon";
 
 function RankList({nome, ponto, rank}: {nome:string, ponto:number, rank:number}){
+
+    
+
     return (
         <List component='ol' sx={{
             display:'flex',
@@ -26,7 +29,7 @@ function RankList({nome, ponto, rank}: {nome:string, ponto:number, rank:number})
 
               <Typography sx={{
                 fontWeight: 'bold',
-                marginRight: '37px',
+                marginRight: '20px',
                 display:'flex',
                 justifyContent: 'space-between',
                 alignItems:'center'
@@ -43,7 +46,7 @@ function RankList({nome, ponto, rank}: {nome:string, ponto:number, rank:number})
 
             </ListItem>
           </List>
-
+            
     );
 }
 
