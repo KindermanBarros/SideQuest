@@ -2,14 +2,13 @@ import React from "react";
 import "./App.css";
 import logo from "../../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
-import Card from "../../shared/components/card/Card";
+import Card from "../../shared/components/card/card";
 
 const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p />
-        <Link to="/signin">
+        <Link to="/Home">
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <p>
