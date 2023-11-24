@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Header from "../../shared/components/header/Header";
-import Card from "../../shared/components/card/card";
+import Card from "../../shared/components/card/Card";
 
 function Quests() {
   return (

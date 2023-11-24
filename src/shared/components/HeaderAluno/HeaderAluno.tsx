@@ -1,7 +1,7 @@
 import { AppBar, Box, Button, Typography } from "@mui/material";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import AddIcon from "@mui/icons-material/Add";
-import ProfileIcon from "../../profileIcon";
+import ProfileIcon from "../../ProfileIcon";
 
 import React from "react";
 import App from "../../../pages/App/App";
