@@ -13,11 +13,11 @@ function Header(){
               <Typography sx={{fontWeight:'bold'}}>Quests</Typography> 
             </Button>
 
-            <Button sx={{color:'black', width:'200px', height:'45px', bgcolor: 'white', borderRadius:'10px', marginLeft: '70px', gap: '20px', display:'flex', justifyContent:'space-between', alignItems: 'center'}}>
+            <Button sx={{color:'black', width:'200px', height:'45px', bgcolor: 'white', borderRadius:'10px', marginLeft: '100px', gap: '20px', display:'flex', justifyContent:'center', alignItems: 'center'}}>
                 <AddIcon fontSize="large"/>
-                <Typography sx={{}}>Criar card</Typography>
+                <Typography sx={{fontWeight:"bold"}}>Criar card</Typography>
             </Button>
-
+            
         </AppBar>
     );
 }
