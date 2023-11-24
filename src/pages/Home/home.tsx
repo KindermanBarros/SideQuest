@@ -11,7 +11,7 @@ function Home() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
-        bgcolor: "#05445E",
+        bgcolor: " ",
       }}
     >
       <Header />

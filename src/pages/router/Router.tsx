@@ -8,6 +8,7 @@ import Home from "../Home/home";
 import Quests from "../Quests/quests";
 import SignUp from "../SignIn/SignUp";
 import HomeAluno from "../HomeAluno/homeAluno";
+import QuestPage from "../QuestPage/QuestPage";
 
 const AppRouter: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter: React.FC = () => {
         <Route path="/HomeAluno" element={<HomeAluno/>} />
         <Route path="/Quests" element={<Quests />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/QuestPage" element = {<QuestPage/>}/>
       </Routes>
     </Router>
   );
