@@ -1,9 +1,7 @@
-import { AppBar, Button, CardMedia, Menu, Typography } from "@mui/material";
+import { AppBar, Button, Typography } from "@mui/material";
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import AddIcon from '@mui/icons-material/Add';
 
-import React from "react";
-import App from "../../../pages/App/App";
 
 function Header(){
     return (

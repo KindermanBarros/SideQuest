@@ -6,6 +6,7 @@ import SignIn from '../SignIn/SignIn';
 import App from '../App/App';
 import Home from '../Home/home';
 import Quests from '../Quests/quests';
+import SignUp from '../SignIn/SignUp';
 
 
 const AppRouter: React.FC = () => {
@@ -16,6 +17,7 @@ const AppRouter: React.FC = () => {
                 <Route path="/signin" element={<SignIn />} />
                 <Route path="/Home" element={<Home/>} />
                 <Route path='/Quests' element={<Quests/>}/>
+                <Route path="/signup" element={<SignUp />} />
             </Routes>
         </Router>
     );

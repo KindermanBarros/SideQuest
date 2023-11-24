@@ -2,8 +2,7 @@ import React from "react";
 import "./App.css";
 import logo from "../../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
-import Card from "../../shared/components/card/Card";
-
+import Card from "../../shared/components/card/card";
 
 const App: React.FC = () => {
   return (
@@ -13,20 +12,14 @@ const App: React.FC = () => {
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Sidequest é uma plataforma para utilização de quests em sala de aula.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <div>
+        <p>Dever de casa nunca foi tão divertido!</p>
+      
+        <div>
         <Card title="My Card Title" buttonText="Click me" />
       </div>
+      </header>
     </div>
   );
 };

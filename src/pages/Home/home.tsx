@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Header from "../../shared/header/header";
 import RankList from "../../shared/rankList";
 
-
 function Home() {
   return (
     <Box
