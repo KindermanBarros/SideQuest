@@ -5,6 +5,7 @@ import ProfileIcon from "../profileIcon";
 
 import React from "react";
 import App from "../../pages/App/App";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -24,6 +25,7 @@ function Header() {
         display:'flex',
     }}
     >
+      <Link to={"/Quests"}>
       <Button
         sx={{
           color: "black",
@@ -37,12 +39,15 @@ function Header() {
           justifyContent: "center",
           alignItems: "center",
           transition: 'transform 0.3s ease',
-          ':hover': {bgcolor: 'white',  transform: 'scale(1.1)'}
+          ':hover': {bgcolor: 'white',  transform: 'scale(1.1)'},
+          textDecoration: 'none'
         }}
       >
         <MenuBookIcon fontSize="large" />
+       
         <Typography sx={{ fontWeight: "bold" }}>Quests</Typography>
       </Button>
+      </Link>
 
       <Button
         sx={{

@@ -32,9 +32,7 @@ function Quests(){
         <BasicCard title="HTML" image="zap"/>
         <BasicCard title="HTML" image="zap"/>
         <BasicCard title="HTML" image="zap"/>
-        <BasicCard title="HTML" image="zap"/>
-        <BasicCard title="HTML" image="zap"/>
-        <BasicCard title="HTML" image="zap"/>
+    
         </Box>
         
       </Box>
