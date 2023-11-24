@@ -29,9 +29,9 @@ function Quests(){
             gridTemplateColumns: '1fr 1fr 1fr',
             gap: '12px'
         }}>
-        <BasicCard title="HTML" image="zap"/>
-        <BasicCard title="HTML" image="zap"/>
-        <BasicCard title="HTML" image="zap"/>
+        <BasicCard title="HTML" buttonText="test"/>
+        <BasicCard title="HTML" buttonText="test"/>
+        <BasicCard title="HTML" buttonText="test"/>
     
         </Box>
         
