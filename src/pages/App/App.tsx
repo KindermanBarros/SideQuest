@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Link to="/signin">
+        <Link to="/Home">
           <img src={logo} className="App-logo" alt="logo" />
         </Link>
         <p>
