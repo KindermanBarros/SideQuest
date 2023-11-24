@@ -17,7 +17,6 @@ function HeaderAluno(){
           flexDirection: "row",
           alignItems: "center",
           justifyContent: 'space-between',
-          
         }}
       >
       <Box 

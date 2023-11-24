@@ -30,9 +30,9 @@ function HomeAluno(){
             gap: '12px'
         }}>
 
-          <Card title="HTML" subtitle="HTML" body="Hewo" buttonText="test" />
-          <Card title="HTML" subtitle="HTML" body="HWEWO" buttonText="test" />
-          <Card title="HTML" subtitle="HTML" body="hEWO" buttonText="test" />
+          <Card title="HTML" subtitle="03/09/2024" body="Sergio" buttonText="test" />
+          <Card title="React" subtitle="20/05/2024" body="Phelipe" buttonText="test" />
+        
     
         </Box>
         
