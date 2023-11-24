@@ -1,54 +1,65 @@
-// src/pages/SignIn/SignIn.tsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { TextField, Button } from "@mui/material";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signInWithPopup,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { auth, googleAuthProvider as provider } from "../../firebase";
 
-interface Credentials {
-  username: string;
-  password: string;
-}
+const LoginForm: React.FC = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-const SignIn: React.FC = () => {
-  const [credentials, setCredentials] = useState<Credentials>({ username: '', password: '' });
-
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setCredentials((prevCredentials) => ({ ...prevCredentials, [name]: value }));
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // Handle errors here
+      });
   };
 
-  const handleLogin = () => {
-    // Add your authentication logic here
-    console.log('Logging in with:', credentials);
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential?.accessToken;
+        const user = result.user;
+        // User signed in
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        const email = error.customData.email;
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // Handle errors here
+      });
   };
 
   return (
-    <div className="SignIn">
-      <h1>Login</h1>
-      <form>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            value={credentials.username}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={credentials.password}
-            onChange={handleInputChange}
-          />
-        </div>
-        <button type="button" onClick={handleLogin}>
-          Login
-        </button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <TextField
+        label="Username"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <TextField
+        label="Password"
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <Button type="submit">Login</Button>
+    </form>
   );
 };
 
-export default SignIn;
+export default LoginForm;
