@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material';
-import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
+import { Card as MuiCard, CardContent, Typography } from '@mui/material';
 
 const StyledCard = styled(MuiCard)({
   minWidth: 200,
@@ -11,15 +11,6 @@ const StyledCard = styled(MuiCard)({
   borderRadius: 10,
 });
 
-const StyledCardBottom = styled(MuiCard)({
-  minWidth: 300,
-  minHeight: 300,
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'flex-end',
-  borderRadius: 10,
-  color: '#D4F1F4',
-});
 
 const StyledTypography = styled(Typography)({
   fontSize: 14,
@@ -34,7 +25,7 @@ interface CardProps {
   buttonText: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, subtitle, body, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title, subtitle, body }) => {
   return (
     <StyledCard>
       <CardContent>

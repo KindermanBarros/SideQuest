@@ -2,8 +2,6 @@ import React from "react";
 import "./App.css";
 import logo from "../../assets/icons/logo.svg";
 import { Link } from "react-router-dom";
-import { IconButton } from "@mui/material";
-import Typography from "@mui/material/Typography";
 
 
 const App: React.FC = () => {
@@ -19,9 +17,7 @@ const App: React.FC = () => {
           Sidequest é uma plataforma para utilização de quests em sala de aula.
         </p>
         <p>Dever de casa nunca foi tão divertido!</p>
-        <IconButton>
-          <Typography>Butts</Typography>
-        </IconButton>
+        <p>Toque na logo para fazer login!</p>
       </header>
 
       <body>

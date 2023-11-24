@@ -11,6 +11,7 @@ function ProfileIcon({tam, color}: {tam:number, color:string}){
             borderRadius: '50%',
             bgcolor: `${color}`,
             height: `${tam}px`,
+            width: `${tam}px`,
             marginRight: '20px',
             ':hover': {bgcolor: 'white'}
 
