@@ -5,6 +5,7 @@ export const AppStyles = styled('div')(()=>({
     flexDirection: 'column',
     height: '100%',
     width: '100%',
+    fontFamily: 'Roboto',
 }));
 
 export const GlobalStyles = styled('div')(()=>({
@@ -12,4 +13,5 @@ export const GlobalStyles = styled('div')(()=>({
     flexDirection: 'column',
     height: '100vh',
     width: '100wh',
+    fontFamily: 'Roboto',
 }));

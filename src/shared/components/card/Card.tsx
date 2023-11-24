@@ -3,19 +3,30 @@ import { styled } from '@mui/material';
 import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
 
 const StyledCard = styled(MuiCard)({
+  minWidth: 200,
+  minHeight: 200,
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
+  borderRadius: 10,
+});
+
+const StyledCardBottom = styled(MuiCard)({
   minWidth: 300,
   minHeight: 300,
-  // Add more styling as needed
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
+  borderRadius: 10,
+  color: '#D4F1F4',
 });
 
 const StyledTypography = styled(Typography)({
   fontSize: 14,
-  // Add more styling as needed
+  fontFamily: 'Roboto',
 });
 
-const StyledButton = styled(Button)({
-  // Add styling for the button
-});
+
 interface CardProps {
   title: string;
   subtitle: string;
@@ -23,23 +34,20 @@ interface CardProps {
   buttonText: string;
 }
 
-const Card: React.FC<CardProps> = ({ title,subtitle,body, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title, subtitle, body, buttonText }) => {
   return (
     <StyledCard>
       <CardContent>
-        <StyledTypography color="text.secondary" gutterBottom>
+        <StyledTypography>
           {title}
         </StyledTypography>
-        <Typography variant="h5" component="div">
+        <StyledTypography >
           {subtitle}
-        </Typography>
-        <Typography mb={1.5} color="text.secondary">
+        </StyledTypography>
+        <StyledTypography>
           {body}
-        </Typography>
+        </StyledTypography>
       </CardContent>
-      <StyledButton variant="contained" color="primary">
-        {buttonText}
-      </StyledButton>
     </StyledCard>
   );
 };
