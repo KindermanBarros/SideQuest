@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../../shared/components/card/Card";
 import { Box, Typography } from "@mui/material";
 import HeaderAluno from "../../shared/components/HeaderAluno/HeaderAluno";
+import { Link } from "react-router-dom";
 
 function HomeAluno(){
     return (
@@ -29,8 +30,10 @@ function HomeAluno(){
             gridTemplateColumns: '1fr 1fr 1fr',
             gap: '12px'
         }}>
-
+          <Link to="/QuestPage">
           <Card title="HTML" subtitle="03/09/2024" body="Sergio" buttonText="test" />
+          </Link>
+
           <Card title="React" subtitle="20/05/2024" body="Phelipe" buttonText="test" />
         
     

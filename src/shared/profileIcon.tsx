@@ -1,10 +1,12 @@
 import { Box, Button, Typography, buttonBaseClasses } from "@mui/material";
 import React from "react";
 import PersonIcon from '@mui/icons-material/Person';
+import { Link } from "react-router-dom";
 
 function ProfileIcon({tam, color}: {tam:number, color:string}){
 
     return (
+        <Link to="/HomeAluno">
         <Button
         sx=
         {{
@@ -18,6 +20,8 @@ function ProfileIcon({tam, color}: {tam:number, color:string}){
         }}>
             <PersonIcon fontSize="large"/>
         </Button>
+        
+        </Link>
     )
 
 }
