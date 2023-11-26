@@ -1,7 +1,7 @@
 import { AppBar, Box, Button, Typography, Backdrop } from "@mui/material";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import AddIcon from "@mui/icons-material/Add";
-import ProfileIcon from "../../ProfileIcon";
+import ProfileIcon from "../ProfileIcon";
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import CreateCardsModal from "../modal/CreateCards";

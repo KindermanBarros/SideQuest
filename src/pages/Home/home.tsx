@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import Header from "../../shared/components/header/Header";
-import RankList from "../../shared/rankList";
+import RankList from "../../shared/components/rankList";
 
 function Home() {
   return (

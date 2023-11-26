@@ -2,13 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // Import your components/pages here
-import SignIn from "../SignIn/SignIn";
-import App from "../App/App";
-import Home from "../Home/home";
-import Quests from "../Quests/quests";
-import SignUp from "../SignIn/SignUp";
-import HomeAluno from "../HomeAluno/homeAluno";
-import QuestPage from "../QuestPage/QuestPage";
+import SignIn from "../signIn/SignIn";
+import App from "../app/App";
+import Home from "../home/Home";
+import Quests from "../quests/Quests";
+import SignUp from "../signIn/SignUp";
+import HomeAluno from "../homeAluno/HomeAluno";
+import QuestPage from "../questPage/QuestPage";
 
 const AppRouter: React.FC = () => {
   return (

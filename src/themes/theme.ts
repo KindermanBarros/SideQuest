@@ -12,7 +12,6 @@ const theme = createTheme({
       main: "#D4F1F4",
     },
 
-    //#D4F1F4
     error: {
       main: "#red",
     },
@@ -23,3 +22,5 @@ const theme = createTheme({
 });
 
 export default theme;
+
+
